@@ -1,5 +1,7 @@
 # LinkedIn Prospecting AI Agents
 
+> **Made by [Varritech](https://varritech.com)** — AI-powered software development for founders
+
 A complete, production-ready LinkedIn prospecting system powered by AI agents. This system automates lead discovery, qualification, outreach, and follow-up sequences.
 
 ## 🚀 Features
