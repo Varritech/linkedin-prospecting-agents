@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varritech Visual Template</title>
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ============================================
+       VARRITECH BRAND STYLES
+       ============================================ */
+    
+    :root {
+      /* Primary Colors */
+      --bg-dark: #0B0B0F;
+      --bg-grid: #111116;
+      --purple-accent: #9E55FF;
+      --lime-accent: #9BE823;
+      --white: #FFFFFF;
+      --gray: #BFBFC3;
+      
+      /* Typography */
+      --font-display: 'Poppins', sans-serif;
+      --font-body: 'Chakra Petch', sans-serif;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-dark);
+      color: var(--white);
+      overflow: hidden;
+    }
+    
+    /* ============================================
+       BASE CANVAS (1536x1024 for LinkedIn)
+       ============================================ */
+    
+    .canvas {
+      width: 1536px;
+      height: 1024px;
+      position: relative;
+      background: linear-gradient(180deg, var(--bg-dark) 0%, #141418 100%);
+      overflow: hidden;
+    }
+    
+    /* Grid Pattern */
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(var(--bg-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.5;
+    }
+    
+    /* Purple Vignette (Freeform Gradient) */
+    .vignette {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1200px;
+      height: 600px;
+      background: radial-gradient(ellipse at center, rgba(158, 85, 255, 0.3) 0%, transparent 70%);
+      filter: blur(60px);
+    }
+    
+    /* ============================================
+       LOGO BRANDING
+       ============================================ */
+    
+    .brand-header {
+      position: absolute;
+      top: 48px;
+      left: 64px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .logo-mark {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--purple-accent), var(--lime-accent));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 24px;
+      color: var(--bg-dark);
+    }
+    
+    .logo-text {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    /* ============================================
+       HERO CONTENT
+       ============================================ */
+    
+    .hero {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      max-width: 1200px;
+    }
+    
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: 84px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    
+    .hero-headline .highlight {
+      color: var(--purple-accent);
+    }
+    
+    .hero-subhead {
+      font-family: var(--font-body);
+      font-size: 28px;
+      color: var(--gray);
+      font-weight: 400;
+      max-width: 800px;
+      margin: 0 auto 48px;
+    }
+    
+    /* ============================================
+       CTA BUTTONS (Lime Border Pills)
+       ============================================ */
+    
+    .cta-container {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .cta-button {
+      padding: 18px 42px;
+      border: 2px solid var(--lime-accent);
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: transparent;
+      color: var(--lime-accent);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-button.primary {
+      background: var(--lime-accent);
+      color: var(--bg-dark);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(155, 232, 35, 0.3);
+    }
+    
+    /* ============================================
+       DECORATIVE ELEMENTS
+       ============================================ */
+    
+    /* Lime Corner Dots */
+    .corner-dots {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: var(--lime-accent);
+      border-radius: 2px;
+    }
+    
+    .corner-dots.top-right {
+      top: 48px;
+      right: 64px;
+    }
+    
+    .corner-dots.bottom-left {
+      bottom: 48px;
+      left: 64px;
+    }
+    
+    .corner-dots.bottom-right {
+      bottom: 48px;
+      right: 64px;
+    }
+    
+    /* 3D Geometric Shapes (Bauhaus-inspired) */
+    .shape {
+      position: absolute;
+      opacity: 0.1;
+    }
+    
+    .shape-circle {
+      width: 200px;
+      height: 200px;
+      border: 3px solid var(--purple-accent);
+      border-radius: 50%;
+      top: 200px;
+      right: 200px;
+    }
+    
+    .shape-square {
+      width: 150px;
+      height: 150px;
+      border: 3px solid var(--lime-accent);
+      bottom: 200px;
+      right: 300px;
+      transform: rotate(45deg);
+    }
+    
+    .shape-triangle {
+      width: 0;
+      height: 0;
+      border-left: 75px solid transparent;
+      border-right: 75px solid transparent;
+      border-bottom: 130px solid var(--purple-accent);
+      opacity: 0.05;
+      top: 400px;
+      left: 200px;
+    }
+    
+    /* ============================================
+       BADGES (Tech Stack)
+       ============================================ */
+    
+    .badge-container {
+      position: absolute;
+      bottom: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 16px;
+    }
+    
+    .badge {
+      padding: 10px 24px;
+      border: 1px solid var(--purple-accent);
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--purple-accent);
+      background: rgba(158, 85, 255, 0.1);
+    }
+    
+    /* ============================================
+       FOOTER BRANDING
+       ============================================ */
+    
+    .brand-footer {
+      position: absolute;
+      bottom: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+    
+    .tagline {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--gray);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    
+    .website {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--lime-accent);
+      text-decoration: none;
+    }
+    
+    /* ============================================
+       VARIANTS
+       ============================================ */
+    
+    /* LinkedIn Post (1200x627) */
+    .canvas.linkedin {
+      width: 1200px;
+      height: 627px;
+    }
+    
+    .canvas.linkedin .hero-headline {
+      font-size: 56px;
+    }
+    
+    .canvas.linkedin .hero-subhead {
+      font-size: 22px;
+    }
+    
+    /* Twitter/X (1200x675) */
+    .canvas.twitter {
+      width: 1200px;
+      height: 675px;
+    }
+    
+    /* Story (1080x1920) */
+    .canvas.story {
+      width: 1080px;
+      height: 1920px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Canvas (1536x1024 for LinkedIn Landscape) -->
+  <div class="canvas">
+    
+    <!-- Background Elements -->
+    <div class="grid"></div>
+    <div class="vignette"></div>
+    
+    <!-- Decorative Shapes -->
+    <div class="shape shape-circle"></div>
+    <div class="shape shape-square"></div>
+    <div class="shape shape-triangle"></div>
+    
+    <!-- Brand Header -->
+    <div class="brand-header">
+      <div class="logo-mark">V</div>
+      <div class="logo-text">Varritech</div>
+    </div>
+    
+    <!-- Corner Dots -->
+    <div class="corner-dots top-right"></div>
+    <div class="corner-dots bottom-left"></div>
+    <div class="corner-dots bottom-right"></div>
+    
+    <!-- Hero Content -->
+    <div class="hero">
+      <h1 class="hero-headline">
+        <span class="highlight">Bold ideas</span><br>
+        wait for no one
+      </h1>
+      <p class="hero-subhead">
+        AI-powered software development for founders who want to ship fast and scale without limits.
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="cta-container">
+        <button class="cta-button primary">Get Started</button>
+        <button class="cta-button">Learn More</button>
+      </div>
+    </div>
+    
+    <!-- Tech Stack Badges -->
+    <div class="badge-container">
+      <span class="badge">AI-Powered</span>
+      <span class="badge">Fast Delivery</span>
+      <span class="badge">Scalable</span>
+    </div>
+    
+    <!-- Brand Footer -->
+    <div class="brand-footer">
+      <p class="tagline">The code behind your vision</p>
+      <a href="https://varritech.com" class="website">VARRITECH.COM</a>
+    </div>
+    
+  </div>
+  
+  <!-- 
+    ============================================
+    USAGE INSTRUCTIONS
+    ============================================
+    
+    1. Customize the .hero content for each post
+    2. Change CTA button text as needed
+    3. Update badge text for tech stack
+    4. For different platforms, add class to .canvas:
+       - LinkedIn: class="canvas linkedin" (1200x627)
+       - Twitter/X: class="canvas twitter" (1200x675)
+       - Story: class="canvas story" (1080x1920)
+    
+    5. To export as image:
+       - Open in browser
+       - Use screenshot tool or html2canvas
+       - Or use Puppeteer/Playwright for automation
+    
+    ============================================
+  -->
+  
+</body>
+</html>
