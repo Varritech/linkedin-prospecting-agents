@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" width="1536" height="1024">
+  <title>AI Prospecting Agents - LinkedIn Automation System</title>
+  <desc>Visual showing 4-agent pipeline for automated LinkedIn prospecting: Scout, Qualify, Outreach, Follow-up</desc>
+  
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B0B0F"/>
+      <stop offset="100%" stop-color="#141418"/>
+    </linearGradient>
+    
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#111116" stroke-width="1"/>
+    </pattern>
+    
+    <!-- Purple vignette glow -->
+    <radialGradient id="vignette" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#2B1334" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0B0B0F" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Neon purple glow effect -->
+    <filter id="purple-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Neon lime glow effect -->
+    <filter id="lime-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1536" height="1024" fill="url(#bg-gradient)"/>
+  
+  <!-- Grid overlay -->
+  <rect width="1536" height="1024" fill="url(#grid)"/>
+  
+  <!-- Purple vignette -->
+  <rect width="1536" height="1024" fill="url(#vignette)"/>
+  
+  <!-- Corner dots (Varritech style) -->
+  <circle cx="20" cy="20" r="4" fill="#9BE823"/>
+  <circle cx="1516" cy="20" r="4" fill="#9BE823"/>
+  <circle cx="20" cy="1004" r="4" fill="#9BE823"/>
+  <circle cx="1516" cy="1004" r="4" fill="#9BE823"/>
+  
+  <!-- Main headline -->
+  <text x="768" y="180" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="72" font-weight="900" fill="#FFFFFF" filter="url(#purple-glow)">
+    <tspan>AI PROSPECTING</tspan>
+  </text>
+  
+  <text x="768" y="260" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="72" font-weight="900" fill="#9E55FF" filter="url(#purple-glow)">
+    <tspan>AGENTS</tspan>
+  </text>
+  
+  <!-- Subheadline -->
+  <text x="768" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#BFBFC3" font-weight="400">
+    <tspan>15 hours/week → 30 minutes/week</tspan>
+  </text>
+  
+  <!-- Agent pipeline containers -->
+  <!-- Agent 1: Scout -->
+  <g transform="translate(100, 420)">
+    <rect x="0" y="0" width="280" height="180" rx="12" fill="#141418" stroke="#9BE823" stroke-width="2" filter="url(#lime-glow)"/>
+    <rect x="0" y="0" width="280" height="50" rx="12" fill="#9BE823" opacity="0.2"/>
+    <text x="140" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#9BE823">SCOUT</text>
+    <text x="140" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">Search LinkedIn</text>
+    <text x="140" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">Extract profiles</text>
+    <text x="140" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">Add to queue</text>
+    <!-- Icon -->
+    <circle cx="240" cy="140" r="20" fill="none" stroke="#9BE823" stroke-width="2"/>
+    <path d="M 230 140 L 240 150 L 250 130" fill="none" stroke="#9BE823" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <g transform="translate(395, 490)">
+    <path d="M 0 20 L 70 20" stroke="#9BE823" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arrowhead)"/>
+    <polygon points="70,20 60,15 60,25" fill="#9BE823"/>
+  </g>
+  
+  <!-- Agent 2: Qualify -->
+  <g transform="translate(480, 420)">
+    <rect x="0" y="0" width="280" height="180" rx="12" fill="#141418" stroke="#9BE823" stroke-width="2" filter="url(#lime-glow)"/>
+    <rect x="0" y="0" width="280" height="50" rx="12" fill="#9BE823" opacity="0.2"/>
+    <text x="140" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#9BE823">QUALIFY</text>
+    <text x="140" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">Score 1-10</text>
+    <text x="140" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">AI analysis</text>
+    <text x="140" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">Reject mismatches</text>
+    <!-- Icon -->
+    <circle cx="240" cy="140" r="20" fill="none" stroke="#9BE823" stroke-width="2"/>
+    <text x="240" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#9BE823">8.5</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <g transform="translate(775, 490)">
+    <path d="M 0 20 L 70 20" stroke="#9BE823" stroke-width="3" stroke-dasharray="8,4"/>
+    <polygon points="70,20 60,15 60,25" fill="#9BE823"/>
+  </g>
+  
+  <!-- Agent 3: Outreach -->
+  <g transform="translate(860, 420)">
+    <rect x="0" y="0" width="280" height="180" rx="12" fill="#141418" stroke="#9BE823" stroke-width="2" filter="url(#lime-glow)"/>
+    <rect x="0" y="0" width="280" height="50" rx="12" fill="#9BE823" opacity="0.2"/>
+    <text x="140" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#9BE823">OUTREACH</text>
+    <text x="140" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">Personalized msgs</text>
+    <text x="140" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">No AI slop</text>
+    <text x="140" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">Send via API</text>
+    <!-- Icon -->
+    <circle cx="240" cy="140" r="20" fill="none" stroke="#9BE823" stroke-width="2"/>
+    <path d="M 230 135 L 250 145 L 230 155" fill="none" stroke="#9BE823" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <g transform="translate(1155, 490)">
+    <path d="M 0 20 L 70 20" stroke="#9BE823" stroke-width="3" stroke-dasharray="8,4"/>
+    <polygon points="70,20 60,15 60,25" fill="#9BE823"/>
+  </g>
+  
+  <!-- Agent 4: Follow-up -->
+  <g transform="translate(1240, 420)">
+    <rect x="0" y="0" width="280" height="180" rx="12" fill="#141418" stroke="#9BE823" stroke-width="2" filter="url(#lime-glow)"/>
+    <rect x="0" y="0" width="280" height="50" rx="12" fill="#9BE823" opacity="0.2"/>
+    <text x="140" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#9BE823">FOLLOW-UP</text>
+    <text x="140" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">Track replies</text>
+    <text x="140" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">3-touch sequence</text>
+    <text x="140" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#BFBFC3">Update CRM</text>
+    <!-- Icon -->
+    <circle cx="240" cy="140" r="20" fill="none" stroke="#9BE823" stroke-width="2"/>
+    <path d="M 233 135 L 240 145 L 247 135 M 240 145 L 240 150" fill="none" stroke="#9BE823" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Tech stack badges -->
+  <g transform="translate(568, 680)">
+    <!-- Badge 1: n8n -->
+    <rect x="0" y="0" width="100" height="40" rx="20" fill="#141418" stroke="#9BE823" stroke-width="1.5"/>
+    <text x="50" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#9BE823">n8n</text>
+    
+    <!-- Badge 2: Claude -->
+    <rect x="120" y="0" width="100" height="40" rx="20" fill="#141418" stroke="#9E55FF" stroke-width="1.5"/>
+    <text x="170" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#9E55FF">Claude</text>
+    
+    <!-- Badge 3: API -->
+    <rect x="240" y="0" width="100" height="40" rx="20" fill="#141418" stroke="#9BE823" stroke-width="1.5"/>
+    <text x="290" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#9BE823">Composio</text>
+    
+    <!-- Badge 4: CRM -->
+    <rect x="360" y="0" width="100" height="40" rx="20" fill="#141418" stroke="#9E55FF" stroke-width="1.5"/>
+    <text x="410" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#9E55FF">Notion</text>
+  </g>
+  
+  <!-- ROI highlight -->
+  <g transform="translate(568, 760)">
+    <rect x="0" y="0" width="400" height="60" rx="8" fill="#9BE823" opacity="0.15" stroke="#9BE823" stroke-width="2"/>
+    <text x="200" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#9BE823">€2,953/month profit • €47 cost</text>
+  </g>
+  
+  <!-- Bottom CTA area -->
+  <g transform="translate(768, 900)">
+    <!-- Primary CTA button -->
+    <rect x="-120" y="-25" width="240" height="50" rx="25" fill="#9BE823"/>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0B0B0F">FREE BLUEPRINT</text>
+    
+    <!-- Secondary CTA button -->
+    <rect x="140" y="-25" width="240" height="50" rx="25" fill="none" stroke="#9E55FF" stroke-width="2"/>
+    <text x="260" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#9E55FF">DEPLOY IN 48H</text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <!-- Code snippet style decoration -->
+  <g transform="translate(100, 760)" opacity="0.4">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#9BE823">const agents = ['Scout', 'Qualify', 'Outreach', 'FollowUp'];</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="12" fill="#9BE823">await pipeline.run({ autopilot: true });</text>
+  </g>
+</svg>

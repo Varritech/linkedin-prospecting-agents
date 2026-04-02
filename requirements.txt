@@ -1,0 +1,34 @@
+# LinkedIn Prospecting Agents - Dependencies
+
+# Core
+click>=8.1.0
+pyyaml>=6.0
+requests>=2.31.0
+
+# AI/LLM
+anthropic>=0.18.0
+
+# Notion integration
+notion-client>=2.0.0
+
+# Data handling
+python-dateutil>=2.8.2
+
+# HTTP client with retries
+urllib3>=2.0.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Async support (optional, for future enhancements)
+aiohttp>=3.9.0
+
+# Development
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.1.0
+mypy>=1.5.0
+
+# Logging enhancements
+colorama>=0.4.6

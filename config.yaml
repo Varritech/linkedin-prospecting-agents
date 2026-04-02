@@ -1,0 +1,271 @@
+# LinkedIn Prospecting Agents Configuration
+# ==========================================
+# Edit this file to customize your prospecting pipeline
+
+# ============================================
+# SEARCH CRITERIA
+# ============================================
+search:
+  # Keywords to search for in profiles/titles
+  keywords:
+    - CTO
+    - VP Engineering
+    - Head of Engineering
+    - Technical Director
+    - VP Product
+    - Chief Product Officer
+  
+  # Target industries
+  industries:
+    - Technology
+    - Software
+    - SaaS
+    - Internet
+    - Computer Software
+  
+  # Geographic locations to target
+  locations:
+    - San Francisco Bay Area
+    - New York
+    - London
+    - Remote
+    - United States
+
+# ============================================
+# TARGET PROFILE FOR SCORING
+# ============================================
+target_profile:
+  # Job titles that indicate good fit
+  titles:
+    - CTO
+    - VP
+    - Director
+    - Head
+    - Chief
+    - Founder
+    - Co-founder
+  
+  # Preferred industries
+  industries:
+    - Technology
+    - Software
+    - SaaS
+  
+  # Minimum connection count (indicates network strength)
+  min_connections: 200
+  
+  # Decision maker indicators
+  decision_maker_keywords:
+    - decision
+    - budget
+    - strategy
+    - lead
+    - head
+
+# ============================================
+# LEAD SCORING CONFIGURATION
+# ============================================
+scoring:
+  # Weights for different scoring factors (must sum to ~1.0)
+  weights:
+    title_match: 0.30      # How well title matches target
+    industry_match: 0.20   # Industry alignment
+    location_match: 0.10   # Geographic fit
+    company_size: 0.20     # Company size indicator
+    connections: 0.20      # Network strength
+  
+  # Minimum score threshold to qualify a lead (0.0-1.0)
+  min_threshold: 0.50
+  
+  # Bonus points for specific criteria
+  bonuses:
+    founder: 0.10          # Founder/co-founder
+    recent_hire: 0.05      # Started role in last 6 months
+    company_growth: 0.10   # Company is hiring/growing
+
+# ============================================
+# IDEAL CUSTOMER PROFILE (for AI Analysis)
+# ============================================
+ideal_customer_profile:
+  # Target job titles
+  titles:
+    - CTO
+    - VP Engineering
+    - Head of Engineering
+    - Technical Director
+  
+  # Target industries
+  industries:
+    - Technology
+    - Software
+    - SaaS
+    - AI/ML
+  
+  # Company size range
+  company_size: "50-500 employees"
+  
+  # Must be decision maker?
+  decision_maker: true
+  
+  # Budget indicators
+  budget_signals:
+    - recently funded
+    - hiring engineers
+    - tech stack modernization
+  
+  # Pain points we solve
+  pain_points:
+    - scaling engineering team
+    - technical debt
+    - slow development cycles
+    - hiring challenges
+
+# ============================================
+# COMPANY INFORMATION (for Outreach)
+# ============================================
+company:
+  # Your company name
+  name: "Your Company Name"
+  
+  # Value proposition (what you do)
+  value_prop: "We help companies scale their engineering teams with AI-powered development tools"
+  
+  # Target audience description
+  target_audience: "Tech companies with 50-500 employees looking to accelerate development"
+  
+  # Sender name for messages
+  sender_name: "Your Name"
+  
+  # Sender title
+  sender_title: "Founder"
+  
+  # Website
+  website: "https://yourcompany.com"
+  
+  # Social proof (optional)
+  social_proof:
+    - "Trusted by 100+ engineering teams"
+    - "Backed by top VCs"
+    - "Featured in TechCrunch"
+
+# ============================================
+# OUTREACH CONFIGURATION
+# ============================================
+outreach:
+  # Message tone
+  tone: "professional but friendly"
+  
+  # Message length preference
+  length: "short, 3-4 sentences"
+  
+  # Primary goal of outreach
+  goal: "book a 15-minute discovery call"
+  
+  # Things to avoid in messages
+  avoid:
+    - salesy language
+    - generic pitches
+    - excessive emojis
+    - all caps
+    - exclamation points!!!
+  
+  # Call-to-action
+  cta: "Are you open to a brief chat next week?"
+  
+  # Personalization requirements
+  personalization:
+    - mention recent post or activity
+    - reference their company
+    - note mutual connections (if any)
+  
+  # A/B test variants (optional)
+  variants:
+    - direct
+    - value-first
+    - question-based
+
+# ============================================
+# FOLLOW-UP CONFIGURATION
+# ============================================
+followup:
+  # Days between each follow-up attempt
+  intervals: [3, 7, 14, 30]
+  
+  # Maximum number of follow-ups before giving up
+  max_followups: 4
+  
+  # Stop follow-ups if lead responds?
+  stop_after_response: true
+  
+  # Follow-up message templates
+  templates:
+    followup_1: "Hi {name}, just wanted to bump this to the top of your inbox. Would love to connect."
+    followup_2: "Hey {name}, I know you're busy. If now's not a good time, just let me know when might be better."
+    followup_3: "Hi {name}, last attempt from me. If you're not interested, no worries at all. Best of luck with {company}!"
+  
+  # When to mark as unresponsive
+  unresponsive_after_days: 45
+
+# ============================================
+# RATE LIMITING
+# ============================================
+rate_limits:
+  # LinkedIn API calls per minute
+  linkedin_api_rpm: 30
+  
+  # Claude API calls per minute
+  claude_api_rpm: 60
+  
+  # Notion API calls per second
+  notion_api_rps: 3
+  
+  # Connection requests per day (LinkedIn limit)
+  daily_connection_limit: 100
+  
+  # Messages per day
+  daily_message_limit: 200
+
+# ============================================
+# OUTPUT DIRECTORIES
+# ============================================
+output_dir: "./leads"
+state_dir: "./state"
+logs_dir: "./logs"
+
+# ============================================
+# NOTIFICATION SETTINGS
+# ============================================
+notifications:
+  # Enable webhook notifications?
+  enabled: false
+  
+  # Webhook URL
+  webhook_url: ""
+  
+  # Notify on pipeline completion?
+  on_pipeline_complete: true
+  
+  # Notify on qualified lead found?
+  on_qualified_lead: false
+  
+  # Notify on meeting booked?
+  on_meeting_booked: true
+
+# ============================================
+# ADVANCED SETTINGS
+# ============================================
+advanced:
+  # Enable debug logging?
+  debug: false
+  
+  # Retry failed API calls?
+  retry_on_failure: true
+  
+  # Max retries
+  max_retries: 3
+  
+  # Request timeout (seconds)
+  timeout: 30
+  
+  # Save raw API responses?
+  save_raw_responses: false
